@@ -106,7 +106,7 @@ body {
             auto;    /* footer */
         min-height: 100vh;
         background-image: radial-gradient(
-            circle at 50px 50px,
+            circle at 125px 10px,
             #2f476f 0%,
             #14243d 25%,
             #0c1524 60%,
