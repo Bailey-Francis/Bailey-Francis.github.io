@@ -1,6 +1,6 @@
-export async function loadPage(page: string) {
+export async function loadPage(page: string, lang: string) {
 
-    const response = await fetch(`/pages/${page}.html`)
+    const response = await fetch(`/pages/${lang}/${page}.html`)
 
     const html = await response.text()
 

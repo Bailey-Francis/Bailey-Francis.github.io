@@ -39,6 +39,7 @@
 
 .logo .ookami {
     font-family: "Yuji Boku", serif;
+    user-select: none;
     /*color: black;*/
 }
 
@@ -77,6 +78,7 @@ body {
     font-size: clamp(1rem, 2vw, 2rem);
     border: #222 solid 2px;
     flex: 1;
+    user-select: none;
 }
 
 .nav ul li a{
@@ -136,13 +138,36 @@ body {
     }
 
     .heading {
-        grid-column: col-start 3 / span 11;
+        grid-column: col-start 3 / span 9;
         grid-row: 1;
-        font-size: clamp(3rem, 6vw, 4rem);
+        font-size: clamp(2rem, 6vw, 4rem);
         font-family: "Cormorant Garamond", serif;
         font-weight: 400;
         color: white;
         /*background-image: linear-gradient(to right, #000000, #111111, #333333, #777777, #aaaaaa, #ffffff)*/
+    }
+
+    .language-selector {
+        grid-column: col-start 12;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        gap: 0.5rem;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    .language-selector button {
+        background-color: transparent;
+        color: white;
+        border: transparent;
+        height:fit-content;
+        cursor: pointer;
+    }
+
+    .language-selector button:hover {
+        color: rgb(223, 223, 223);
     }
 
     .nav {
@@ -161,6 +186,7 @@ body {
         flex: initial;
         border: transparent;
         text-decoration: underline;
+        cursor: pointer;
     }
 
     .nav ul li a:hover {
@@ -172,6 +198,7 @@ body {
         grid-row: 2;
         color: rgb(238, 238, 238);
         padding-top: 40px;
+        padding-right: 15vw;
     }
 
     .footer {
@@ -179,4 +206,11 @@ body {
         grid-row: 3;
     }
 
+}
+
+@media (min-width: 900px){
+    .language-selector {
+        flex-direction: row;
+        padding-top: 0px;
+    }
 }
